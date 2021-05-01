@@ -8,17 +8,17 @@
 maplibregl <- function(message, width = NULL, height = NULL, elementId = NULL) {
 
   # forward options using x
-  x = list(
+  x <- list(
     message = message
   )
 
   # create widget
   htmlwidgets::createWidget(
-    name = 'maplibregl',
+    name = "maplibregl",
     x,
     width = width,
     height = height,
-    package = 'maplibregl',
+    package = "maplibregl",
     elementId = elementId
   )
 }
@@ -40,13 +40,15 @@ maplibregl <- function(message, width = NULL, height = NULL, elementId = NULL) {
 #' @name maplibregl-shiny
 #'
 #' @export
-maplibreglOutput <- function(outputId, width = '100%', height = '400px'){
-  htmlwidgets::shinyWidgetOutput(outputId, 'maplibregl', width, height, package = 'maplibregl')
+maplibreglOutput <- function(outputId, width = "100%", height = "400px") {
+  htmlwidgets::shinyWidgetOutput(outputId, "maplibregl", width, height, package = "maplibregl")
 }
 
 #' @rdname maplibregl-shiny
 #' @export
 renderMaplibregl <- function(expr, env = parent.frame(), quoted = FALSE) {
-  if (!quoted) { expr <- substitute(expr) } # force quoted
+  if (!quoted) {
+    expr <- substitute(expr)
+  } # force quoted
   htmlwidgets::shinyRenderWidget(expr, maplibreglOutput, env, quoted = TRUE)
 }
