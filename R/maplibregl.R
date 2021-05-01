@@ -1,25 +1,24 @@
-#' <Add Title>
-#'
-#' <Add Description>
-#'
+#' Create a maplibregl widget
+#' @param style The map's style.
+#' @param width The width of the widget.
+#' @param height The height of the widget.
+#' @param element_id The unique ID of the widget.
+#' @param ... The properties of the map.
 #' @import htmlwidgets
-#'
 #' @export
-maplibregl <- function(message, width = NULL, height = NULL, elementId = NULL) {
-
-  # forward options using x
-  x <- list(
-    message = message
+maplibregl <- function(style = "https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json",
+                       width = NULL, height = NULL, element_id = NULL, ...) {
+  widgetData <- list(
+    mapProps = list(style = style, ...)
   )
 
-  # create widget
   htmlwidgets::createWidget(
     name = "maplibregl",
-    x,
+    x = widgetData,
     width = width,
     height = height,
     package = "maplibregl",
-    elementId = elementId
+    elementId = element_id
   )
 }
 

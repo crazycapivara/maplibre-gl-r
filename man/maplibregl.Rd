@@ -2,10 +2,23 @@
 % Please edit documentation in R/maplibregl.R
 \name{maplibregl}
 \alias{maplibregl}
-\title{<Add Title>}
+\title{Create a maplibregl widget}
 \usage{
-maplibregl(message, width = NULL, height = NULL, elementId = NULL)
+
+  maplibregl(style = "https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json",
+  width = NULL, height = NULL, element_id = NULL, ...)
+}
+\arguments{
+\item{style}{The map's style.}
+
+\item{width}{The width of the widget.}
+
+\item{height}{The height of the widget.}
+
+\item{element_id}{The unique ID of the widget.}
+
+\item{...}{The properties of the map.}
 }
 \description{
-<Add Description>
+Create a maplibregl widget
 }
