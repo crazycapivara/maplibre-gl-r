@@ -5,6 +5,10 @@
 
 <!-- badges: start -->
 
+[![CRAN
+status](https://www.r-pkg.org/badges/version/maplibregl)](https://CRAN.R-project.org/package=maplibregl)
+[![R build
+status](https://github.com/crazycapivara/maplibre-gl-r/workflows/R-CMD-check/badge.svg)](https://github.com/crazycapivara/maplibre-gl-r/actions)
 <!-- badges: end -->
 
 The goal of `maplibregl` is to provide R bindings to
