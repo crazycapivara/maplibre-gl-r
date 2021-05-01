@@ -1,0 +1,16 @@
+{
+  "name": "maplibre-gl-widget",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "build": "webpack ./src/index.js --mode production --output-filename maplibregl.js -o ../inst/htmlwidgets",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Stefan Kuethe",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^5.36.2",
+    "webpack-cli": "^4.6.0"
+  }
+}

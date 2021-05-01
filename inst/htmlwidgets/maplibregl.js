@@ -1,0 +1,1 @@
+(()=>{"use strict";HTMLWidgets.widget({name:"maplibregl",type:"output",factory:function(e,n,t){return{renderValue:function(n){console.log(n),e.innerHTML=n.message},resize:function(e,n){}}}})})();
