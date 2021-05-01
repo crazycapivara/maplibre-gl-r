@@ -4,6 +4,7 @@
 #' @param height The height of the widget.
 #' @param element_id The unique ID of the widget.
 #' @param ... The properties of the map.
+#' @example examples/basemap.R
 #' @import htmlwidgets
 #' @export
 maplibregl <- function(style = "https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json",
