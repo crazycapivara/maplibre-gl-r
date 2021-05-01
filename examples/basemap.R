@@ -4,4 +4,4 @@ map <- maplibregl(
   pitch = 30
 )
 
-if interactive() map
+if (interactive()) map
