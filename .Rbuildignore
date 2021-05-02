@@ -2,5 +2,6 @@
 ^\.Rproj\.user$
 ^LICENSE\.md$
 examples/
+javascript/
 ^README\.Rmd$
 ^\.github$
