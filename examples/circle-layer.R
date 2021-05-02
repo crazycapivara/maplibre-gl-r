@@ -3,8 +3,9 @@ devtools::load_all()
 mvc <- sf::st_as_sf(mapboxer::motor_vehicle_collisions_nyc, coords = c("lng", "lat"), crs = 4326)
 
 map <- maplibregl(
-  center = c(-73.9165, 40.7114),
-  zoom = 10,
+  bounds = unname(sfheaders::sf_bbox(mvc)),
+  #center = c(-73.9165, 40.7114),
+  #zoom = 10,
   pitch = 30,
   element_id = "test"
 ) %>%

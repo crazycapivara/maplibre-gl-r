@@ -9,7 +9,8 @@ Imports:
   htmlwidgets,
   magrittr,
   purrr,
-  geojsonsf
+  geojsonsf,
+  sfheaders
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
