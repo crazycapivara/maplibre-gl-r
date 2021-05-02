@@ -21,6 +21,6 @@ map <- maplibregl(
   element_id = "test"
 ) %>%
   add_control("NavigationControl", pos = "top-left") %>%
-  add_layer(style)
+  add_layer(style, filter = list("==", "injured", 2))
 
 if (interactive()) map

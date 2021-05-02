@@ -15,7 +15,6 @@ export default class Viz {
   }
 
   render(calls) {
-    const map = this._map;
     calls.forEach(({ methodName, args }) => this[methodName](args));
   }
 }
