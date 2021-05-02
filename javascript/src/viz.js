@@ -3,9 +3,14 @@ export default class Viz {
     this._map = map;
   }
 
-  render() {
+  addControl(props) {
     const map = this._map;
-    const control = new maplibregl["NavigationControl"]();
-    map.addControl(control);
+    const control = new maplibregl[props.name](props.options);
+    map.addControl(control, props.pos);
+  }
+
+  render(calls) {
+    const map = this._map;
+    calls.forEach(({ methodName, args }) => this[methodName](args));
   }
 }

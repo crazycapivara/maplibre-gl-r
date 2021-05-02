@@ -1,9 +1,9 @@
-invoke_method <- function(widget, method_name, ...) {
-  pos <- length(widget$x$calls) + 1
-  widget$x$calls[[pos]] <- list(
-    methodName = method_name,
+invoke_method <- function(.map, .name, ...) {
+  pos <- length(.map$x$calls) + 1
+  .map$x$calls[[pos]] <- list(
+    methodName = .name,
     args = list(...) %>%
       purrr::compact()
   )
-  widget
+  .map
 }

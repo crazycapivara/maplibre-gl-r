@@ -14,7 +14,7 @@ export default function(widgetElement, width, height) {
     widgetData.mapProps.container = widgetElement.id;
     map = _widget.map = new maplibregl.Map(widgetData.mapProps);
     viz = _widget.viz = new Viz(map);
-    map.on("load", () => viz.render());
+    map.on("load", () => viz.render(widgetData.calls));
   }
 
   function resize(width, height) {
