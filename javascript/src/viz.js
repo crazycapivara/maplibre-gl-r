@@ -9,6 +9,11 @@ export default class Viz {
     map.addControl(control, props.pos);
   }
 
+  addLayer(props) {
+    const map = this._map;
+    map.addLayer(props.style);
+  }
+
   render(calls) {
     const map = this._map;
     calls.forEach(({ methodName, args }) => this[methodName](args));

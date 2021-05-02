@@ -2,6 +2,7 @@
 
 export("%>%")
 export(add_control)
+export(add_layer)
 export(maplibregl)
 export(maplibreglOutput)
 export(renderMaplibregl)
