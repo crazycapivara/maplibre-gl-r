@@ -4,12 +4,14 @@
 \alias{add_layer}
 \title{Add a layer to the map}
 \usage{
-add_layer(map, style, filter = NULL)
+add_layer(map, style, data = NULL, filter = NULL)
 }
 \arguments{
 \item{map}{A \link{maplibregl} object.}
 
 \item{style}{The layers's style.}
+
+\item{data}{(data.frame or sf) ...}
 
 \item{filter}{filter expression}
 }
