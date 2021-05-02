@@ -10,7 +10,8 @@
 maplibregl <- function(style = "https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json",
                        width = NULL, height = NULL, element_id = NULL, ...) {
   widgetData <- list(
-    mapProps = list(style = style, ...)
+    mapProps = list(style = style, ...),
+    calls = list()
   )
 
   htmlwidgets::createWidget(
