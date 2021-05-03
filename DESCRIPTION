@@ -11,6 +11,8 @@ Imports:
   purrr,
   geojsonsf,
   sfheaders
+Suggests:
+  sf
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true

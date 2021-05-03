@@ -10,8 +10,12 @@ map <- maplibregl(
   element_id = "test"
 ) %>%
   add_control("NavigationControl", pos = "top-left") %>%
-  add_layer(circle_style(
-    circle_color = "blue"
-  ), data = mvc, filter = list("==", "injured", 2))
+  add_layer(
+    circle_style(
+      circle_color = "blue"
+    ),
+    data = mvc,
+    filter = list("==", "injured", 2)
+  )
 
 if (interactive()) map

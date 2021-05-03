@@ -11,9 +11,9 @@ add_layer(map, style, data = NULL, filter = NULL)
 
 \item{style}{The layers's style.}
 
-\item{data}{(data.frame or sf) ...}
+\item{data}{(data.frame or sf object, optional) Overwrites the style's \code{source} parameter.}
 
-\item{filter}{filter expression}
+\item{filter}{(filter expression, optional) Overwrites the style's \code{filter} parameter.}
 }
 \description{
 Add a layer to the map
