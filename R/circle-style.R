@@ -1,6 +1,7 @@
 #' @export
 circle_style <- function(source = NULL,
                          source_layer = NULL,
+                         filter = NULL,
                          circle_blur = NULL,
                          circle_color = NULL,
                          circle_opacity = NULL,
@@ -38,6 +39,7 @@ circle_style <- function(source = NULL,
     type = "circle",
     source = source,
     "source-layer" = source_layer,
+    filter = filter,
     paint = paint,
     layout = layout
   )

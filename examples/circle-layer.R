@@ -15,11 +15,11 @@ map <- maplibregl(
   add_layer(
     circle_style(
       circle_color = "blue",
-      id = LAYER_ID
+      id = LAYER_ID,
+      filter = list("==", "injured", 2)
     ),
-    data = mvc,
-    filter = list("==", "injured", 2)
+    data = mvc
   ) %>%
-  add_tooltip(LAYER_ID, "This is a tooltip")
+  add_tooltip(LAYER_ID, "<p>{{date}}</p><p>number of persons injured: {{injured}}</p>")
 
 if (interactive()) map

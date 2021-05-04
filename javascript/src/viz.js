@@ -1,3 +1,5 @@
+import mustache from "mustache";
+
 export default class Viz {
   constructor(map) {
     this._map = map;
@@ -25,8 +27,7 @@ export default class Viz {
       map.getCanvas().style.cursor = "pointer";
       const lngLat = Object.values(e.lngLat);
       const feature = e.features[0];
-      // const content = render(args.tooltip, feature.properties);
-      const content = args.tooltip;
+      const content = mustache.render(args.tooltip, feature.properties);
       popup.setLngLat(lngLat)
         .setHTML(content)
         .addTo(map);
