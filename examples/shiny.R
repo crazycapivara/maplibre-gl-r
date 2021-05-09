@@ -6,6 +6,7 @@ nyc_boroughs <- sf::st_read("../data-raw/geo_export_d082ab44-4688-42c8-8fe8-2d5f
 
 view <- basicPage(
   selectInput("color", "color", choices = COLORS),
+  checkboxInput("visible", "visible", value = TRUE),
   maplibreglOutput("map")
 )
 
@@ -14,10 +15,12 @@ backend <- function(input, output) {
     as_maplibregl(nyc_boroughs)
   )
 
-  observeEvent(input$color, {
+  observeEvent(list(input$color, input$visible), {
     print(input$color)
+    print(input$visible)
     maplibreglProxy("map") %>%
       set_paint_property("fill-layer", "fill-color", input$color) %>%
+      set_layout_property("fill-layer", "visibility", ifelse(input$visible, "visible", "none")) %>%
       updateMaplibregl()
   })
 }
