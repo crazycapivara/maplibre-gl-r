@@ -5,3 +5,4 @@ examples/
 javascript/
 ^README\.Rmd$
 ^\.github$
+^data-raw$

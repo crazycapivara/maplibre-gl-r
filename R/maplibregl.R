@@ -9,8 +9,13 @@
 #' @export
 maplibregl <- function(style = "https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json",
                        width = NULL, height = NULL, element_id = NULL, ...) {
+  map_props = list(style = style, ...)
+  if (inherits(map_props$bounds, "bbox")) {
+    map_props$bounds <- unname(map_props$bounds)
+  }
+
   widgetData <- list(
-    mapProps = list(style = style, ...),
+    mapProps = map_props,
     calls = list()
   )
 
