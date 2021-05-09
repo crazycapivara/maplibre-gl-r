@@ -13,4 +13,11 @@ maplibregl(
       fill_opacity = 0.5
     )
   ) %>%
+  add_layer(
+    data = nyc_boroughs,
+    line_style(
+      line_color = "blue",
+      line_width = 3
+    )
+  ) %>%
   add_tooltip("fill-layer", "{{boro_name}}")
