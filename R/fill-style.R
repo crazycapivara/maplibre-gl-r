@@ -1,19 +1,18 @@
 #' @export
-fill_style <- function(
-  source = NULL,
-  source_layer = NULL,
-  filter = NULL,
-  fill_antialias = TRUE,
-  fill_color = NULL,
-  fill_opacity = NULL,
-  fill_outline_color = NULL,
-  fill_pattern = NULL,
-  fill_sort_key = NULL,
-  fill_translate = NULL,
-  fill_translate_anchor = NULL,
-  visibility = TRUE,
-  popup = NULL,
-  id = "fill-layer") {
+fill_style <- function(source = NULL,
+                       source_layer = NULL,
+                       filter = NULL,
+                       fill_antialias = TRUE,
+                       fill_color = NULL,
+                       fill_opacity = NULL,
+                       fill_outline_color = NULL,
+                       fill_pattern = NULL,
+                       fill_sort_key = NULL,
+                       fill_translate = NULL,
+                       fill_translate_anchor = NULL,
+                       visibility = TRUE,
+                       popup = NULL,
+                       id = "fill-layer") {
   paint <- compact_list(
     "fill-antialias" = fill_antialias,
     "fill-color" = fill_color,
