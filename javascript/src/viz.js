@@ -43,6 +43,16 @@ export default class Viz {
     });
   }
 
+  setPaintProperty(args) {
+    const map = this._map;
+    map.setPaintProperty(args.layerId, args.property, args.value);
+  }
+
+  setLayoutProperty(args) {
+    const map = this._map;
+    map.setLayoutProperty(args.layerId, args.property, args.value);
+  }
+
   render(calls) {
     calls.forEach(({ methodName, args }) => this[methodName](args));
   }

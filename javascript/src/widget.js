@@ -21,5 +21,15 @@ export default function(widgetElement, width, height) {
     // not implemented yet
   }
 
+  if (HTMLWidgets.shinyMode) {
+    Shiny.addCustomMessageHandler('maplibregl', (obj) => {
+      console.log("proxyObject", obj);
+      if (obj.id === widgetElement.id) {
+        console.log("Updating " + widgetElement.id);
+        viz.render(obj.widgetData.calls);
+      }
+    });
+  }
+
   return { renderValue, resize };
 }
