@@ -21,8 +21,8 @@ as_geojson.sf <- function(data, ...) {
 }
 
 as_geojson.data.frame <- function(data, lng = NULL, lat = NULL) {
-  if (is.null(lng)) lng = names(data)[grep("lng|long|lon|longitude", names(data))]
-  if (is.null(lat)) lat = names(data)[grep("lat|latitude", names(data))]
+  if (is.null(lng)) lng <- names(data)[grep("lng|long|lon|longitude", names(data))]
+  if (is.null(lat)) lat <- names(data)[grep("lat|latitude", names(data))]
 
   geojsonsf::df_geojson(data, lon = lng, lat = lat, simplify = FALSE)
 }

@@ -7,7 +7,7 @@
 #' @export
 add_layer <- function(map, style, data = NULL, id = NULL, ...) {
   if (!is.null(data)) {
-    style$source = ml_as_source(data)
+    style$source <- ml_as_source(data)
   }
 
   style <- utils::modifyList(compact_list(id = id, ...), style)

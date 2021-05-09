@@ -3,9 +3,9 @@ get_style <- function(.data) {
 }
 
 get_style.sfc_POINT <- function(.data) {
-    circle_style(
-      circle_color = "green"
-    )
+  circle_style(
+    circle_color = "green"
+  )
 }
 
 get_style.sfc_MULTIPOLYGON <- function(.data) {
