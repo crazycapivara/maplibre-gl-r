@@ -53,6 +53,11 @@ export default class Viz {
     map.setLayoutProperty(args.layerId, args.property, args.value);
   }
 
+  setFilter(args) {
+    const map = this._map;
+    map.setFilter(args.layerId, args.filter);
+  }
+
   render(calls) {
     calls.forEach(({ methodName, args }) => this[methodName](args));
   }
