@@ -5,6 +5,11 @@ export default class Viz {
     this._map = map;
   }
 
+  addSource(args) {
+    const map = this._map;
+    map.addSource(args.id, args.src);
+  }
+
   addControl(props) {
     const map = this._map;
     const control = new maplibregl[props.name](props.options);

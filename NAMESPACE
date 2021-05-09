@@ -3,6 +3,7 @@
 export("%>%")
 export(add_control)
 export(add_layer)
+export(add_source)
 export(circle_style)
 export(fill_style)
 export(line_style)

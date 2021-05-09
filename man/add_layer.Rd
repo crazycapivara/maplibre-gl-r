@@ -4,7 +4,7 @@
 \alias{add_layer}
 \title{Add a layer to the map}
 \usage{
-add_layer(map, style, data = NULL, filter = NULL)
+add_layer(map, style, data = NULL, id = NULL, ...)
 }
 \arguments{
 \item{map}{A \link{maplibregl} object.}
@@ -13,7 +13,9 @@ add_layer(map, style, data = NULL, filter = NULL)
 
 \item{data}{(data.frame or sf object, optional) Overwrites the style's \code{source} parameter.}
 
-\item{filter}{(filter expression, optional) Overwrites the style's \code{filter} parameter.}
+\item{id}{(character, optional) Overwrites the style's \code{id} parameter.}
+
+\item{...}{Named arguments used to overwrite style parameters.}
 }
 \description{
 Add a layer to the map
