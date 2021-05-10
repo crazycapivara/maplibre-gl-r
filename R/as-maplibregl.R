@@ -1,21 +1,24 @@
-get_style <- function(.data) {
-  UseMethod("get_style", sf::st_geometry(.data))
+get_style <- function(data, ...) {
+  UseMethod("get_style", sf::st_geometry(data))
 }
 
-get_style.sfc_POINT <- function(.data) {
-  circle_style(
-    circle_color = "green"
-  )
+get_style.sfc_POINT <- function(data, ...) {
+  params <- utils::modifyList(list(circle_color = "green"), list(...))
+  #circle_style(
+  #  circle_color = "green"
+  #)
+  do.call(circle_style, params)
 }
 
-get_style.sfc_MULTIPOLYGON <- function(.data) {
+get_style.sfc_MULTIPOLYGON <- function(data, ...) {
   fill_style(
     fill_color = "yellow",
-    fill_opacity = 0.5
+    fill_opacity = 0.5,
+    ...
   )
 }
 
-as_maplibregl <- function(.data) {
+as_maplibregl <- function(.data, ...) {
   if (!inherits(.data, "sf")) {
     stop("'data' needs to be of type 'sf'")
   }
@@ -27,7 +30,7 @@ as_maplibregl <- function(.data) {
   map <- maplibregl(
     bounds = bounds
   ) %>%
-    add_layer(get_style(.data), data = .data)
+    add_layer(get_style(.data, ...), data = .data)
 
   if (navigation_control) map <- map %>% add_control("NavigationControl")
   map
