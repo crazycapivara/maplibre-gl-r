@@ -16,7 +16,8 @@ maplibregl <- function(style = basemaps$carto$dark_matter,
 
   widgetData <- list(
     mapProps = map_props,
-    calls = list()
+    calls = list(),
+    layers = list()
   )
 
   htmlwidgets::createWidget(

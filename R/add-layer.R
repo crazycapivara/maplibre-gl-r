@@ -11,6 +11,7 @@ add_layer <- function(map, style, data = NULL, id = NULL, ...) {
   }
 
   style <- utils::modifyList(compact_list(id = id, ...), style)
+  map$x$layers <- c(map$x$layers, style$id)
   map %>%
     invoke_method("addLayer", style = style)
 }
