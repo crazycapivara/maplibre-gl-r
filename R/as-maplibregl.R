@@ -7,11 +7,11 @@ get_style.sfc_POINT <- function(data, ...) {
   #circle_style(
   #  circle_color = "green"
   #)
-  do.call(circle_style, params)
+  do.call(style_circle, params)
 }
 
 get_style.sfc_MULTIPOLYGON <- function(data, ...) {
-  fill_style(
+  style_fill(
     fill_color = "yellow",
     fill_opacity = 0.5,
     ...

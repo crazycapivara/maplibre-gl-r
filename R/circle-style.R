@@ -1,5 +1,5 @@
 #' @export
-circle_style <- function(source = NULL,
+style_circle <- function(source = NULL,
                          source_layer = NULL,
                          filter = NULL,
                          circle_blur = NULL,
@@ -43,4 +43,9 @@ circle_style <- function(source = NULL,
     paint = paint,
     layout = layout
   )
+}
+
+circle_style <- function(...) {
+  .Deprecated("style_circle")
+  style_circle(...)
 }
