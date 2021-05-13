@@ -4,12 +4,11 @@
 \alias{maplibregl}
 \title{Create a maplibregl widget}
 \usage{
-
-  maplibregl(style = "https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json",
-  width = NULL, height = NULL, element_id = NULL, ...)
+maplibregl(style = basemaps$carto$dark_matter, width = NULL,
+  height = NULL, element_id = NULL, ...)
 }
 \arguments{
-\item{style}{The map's style.}
+\item{style}{The map's style. See also \link{basemaps}.}
 
 \item{width}{The width of the widget.}
 

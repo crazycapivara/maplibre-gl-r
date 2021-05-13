@@ -1,5 +1,5 @@
 #' Create a maplibregl widget
-#' @param style The map's style.
+#' @param style The map's style. See also \link{basemaps}.
 #' @param width The width of the widget.
 #' @param height The height of the widget.
 #' @param element_id The unique ID of the widget.
@@ -7,7 +7,7 @@
 #' @example examples/basemap.R
 #' @import htmlwidgets
 #' @export
-maplibregl <- function(style = "https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json",
+maplibregl <- function(style = basemaps$carto$dark_matter,
                        width = NULL, height = NULL, element_id = NULL, ...) {
   map_props <- list(style = style, ...)
   if (inherits(map_props$bounds, "bbox")) {
