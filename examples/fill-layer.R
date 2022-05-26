@@ -18,7 +18,7 @@ maplibregl(
     )
   ) %>%
   add_layer(
-    line_style(
+    line_layer(
       source = SRC_ID,
       line_color = "blue",
       line_width = 3

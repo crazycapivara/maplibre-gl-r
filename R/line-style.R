@@ -1,5 +1,5 @@
 #' @export
-style_line <- function(source = NULL,
+line_layer <- function(source = NULL,
                        source_layer = NULL,
                        filter = NULL,
                        line_blur = NULL,
@@ -54,6 +54,6 @@ style_line <- function(source = NULL,
 }
 
 line_style <- function(...) {
-  .Deprecated("style_line")
-  style_line(...)
+  .Deprecated("line_layer")
+  line_layer(...)
 }
