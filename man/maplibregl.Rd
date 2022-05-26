@@ -4,8 +4,13 @@
 \alias{maplibregl}
 \title{Create a maplibregl widget}
 \usage{
-maplibregl(style = basemaps$carto$dark_matter, width = NULL,
-  height = NULL, element_id = NULL, ...)
+maplibregl(
+  style = basemaps$carto$dark_matter,
+  width = NULL,
+  height = NULL,
+  element_id = NULL,
+  ...
+)
 }
 \arguments{
 \item{style}{The map's style. See also \link{basemaps}.}

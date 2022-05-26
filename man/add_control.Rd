@@ -4,8 +4,12 @@
 \alias{add_control}
 \title{Add a control to the map}
 \usage{
-add_control(map, control_name = c("NavigationControl", "ScaleControl",
-  "FullscreenControl"), ..., pos = NULL)
+add_control(
+  map,
+  control_name = c("NavigationControl", "ScaleControl", "FullscreenControl"),
+  ...,
+  pos = NULL
+)
 }
 \arguments{
 \item{map}{A \link{maplibregl} object.}

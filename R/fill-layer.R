@@ -1,5 +1,5 @@
 #' @export
-style_fill <- function(source = NULL,
+fill_layer <- function(source = NULL,
                        source_layer = NULL,
                        filter = NULL,
                        fill_antialias = TRUE,
@@ -38,6 +38,6 @@ style_fill <- function(source = NULL,
 }
 
 fill_style <- function(...) {
-  .Deprecated("style_fill")
-  style_fill(...)
+  .Deprecated("fill_layer")
+  fill_layer(...)
 }

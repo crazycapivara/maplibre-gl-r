@@ -12,8 +12,10 @@ Imports:
   geojsonsf,
   sfheaders
 Suggests:
-  sf
+    testthat (>= 3.0.0),
+    sf
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 6.1.1
+RoxygenNote: 7.1.2
+Config/testthat/edition: 3

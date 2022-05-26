@@ -11,7 +11,7 @@ maplibregl(
 ) %>%
   add_source(nyc_boroughs, id = SRC_ID) %>%
   add_layer(
-    fill_style(
+    fill_layer(
       source = SRC_ID,
       fill_color = c("get", "color"),
       fill_opacity = 0.5
