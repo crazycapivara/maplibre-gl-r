@@ -1,6 +1,6 @@
 dependencies:
   - name: maplibre-gl
     version: 1.14.0
-    src: inst/htmlwidgets/lib/maplibre-gl
+    src: htmlwidgets/lib/maplibre-gl
     script: maplibre-gl.js
     stylesheet: maplibre-gl.css
